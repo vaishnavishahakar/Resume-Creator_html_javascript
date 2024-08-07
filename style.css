@@ -1,0 +1,732 @@
+
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.textFont {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000;
+}
+
+.resumeText {
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+}
+
+.headingText {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+}
+
+.resumeContainer {
+  margin-top: 50px;
+  padding-right: 2%;
+}
+
+.card-body-bg {
+  margin: 10px 0 0 0;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, .125);
+
+}
+
+.lables {
+  font-weight: bold;
+  color: #000;
+}
+
+.inputMargin {
+  margin: 5px 0;
+}
+.inputMargin:focus{
+  border: 3px solid #337b6b;
+  -webkit-box-shadow: none;
+}
+
+.verticalSpace {
+  margin: 10px 0;
+}
+
+.topSpace {
+  margin-top: 20px;
+}
+
+.bottomSpace {
+  margin-top: 15px;
+}
+
+.downloadCV {
+  color: #fff;
+  background-color: #134b3f;
+  border-radius: 5px;
+  padding: 10px;
+  width: 152px;
+  border: none;
+}
+
+.downloadCV:hover {
+  color: #fff;
+  background-color: #337b6b;
+  border: none;
+}
+
+.generateCV {
+  color: #fff;
+  background-color: #134b3f;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+  border: none;
+}
+
+.generateCV:hover {
+  color: #fff;
+  background-color: #337b6b;
+  border: none;
+}
+
+.card-header:first-child {
+  margin: 0 0 10px 0;
+  padding: .5rem 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card-header {
+  margin: 0 0 10px 0;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.resumeCard {
+  display: block;
+  border: 3px double #134b3f;
+  padding: 10px;
+}
+
+.cv {
+  size: A4;
+  width: 100%;
+  display: none;
+}
+
+.cv .container {
+  size: A4;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgb(0, 0, 0, .1);
+  margin: auto;
+  padding: 0;
+}
+
+.cv .container .left {
+  background-color: #134b3f;
+  -webkit-print-color-adjust: exact;
+  padding: 20px;
+  width: 100%;
+}
+
+.cv .text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255, .2);
+}
+
+.cv .text .pic {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.cv .text h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+
+.cv .text span {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cv .text .pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cv .info {
+  padding-top: 20px;
+}
+
+.cv .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cv .info ul {
+  position: relative;
+  padding-left: 0rem;
+}
+
+.cv .info #fFacebook,
+.cv .info #lLinkedin {
+  cursor: pointer;
+}
+
+.cv .info ul li {
+  list-style: none;
+  position: relative;
+  margin: 5px 0px;
+}
+
+.cv .info ul li .icon {
+  display: inline-block;
+  width: 20px;
+  font-size: 16px;
+  color: #2bf1c6;
+}
+
+.cv .info ul li span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.cv .lang {
+  margin-top: 20px;
+}
+
+.cv .lang ul {
+  padding-left: 1rem;
+}
+
+.cv .lang li {
+  list-style: square;
+  color: #2bf1c6;
+  padding: 10px;
+}
+
+.cv .lang li span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.cv .skills {
+  margin-top: 20px;
+}
+
+.cv .skills ul {
+  padding-left: 1rem;
+}
+
+.cv .skills li {
+  list-style: square;
+  color: #2bf1c6;
+  padding: 10px;
+}
+
+.cv .skills li span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.cv .certificate {
+  margin-top: 20px;
+}
+
+.cv .certificate ul {
+  padding-left: 1rem;
+}
+
+.cv .certificate li {
+  list-style: square;
+  color: #2bf1c6;
+  padding: 10px;
+}
+
+.cv .certificate li span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.cv .container .right {
+  position: relative;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.cv .right .about h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  color: #011f2d;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cv .right .about p {
+  color: #333;
+  font-size: 16px;
+  margin: 12px;
+}
+
+.cv .right .exp h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  font-size: 18px;
+  color: #011f2d;
+  margin-top: 20px;
+}
+
+.cv .exp .works h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  color: #011f2d;
+}
+
+.cv .exp li {
+  padding: 0px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 0rem;
+  list-style: square;
+}
+
+.cv .edu li {
+
+  padding: 0px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 0rem;
+  list-style: square;
+}
+
+.cv .right .edu h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  font-size: 18px;
+  color: #011f2d;
+  margin-top: 20px;
+}
+
+.squar {
+  color: #134b3f;
+  font-size: 20px;
+}
+
+.cv .data {
+  min-height: 600;
+  background-color: #fff;
+  width: 100%;
+  margin: 50px;
+}
+
+.cv .data input {
+  width: 90%;
+  height: 90px;
+  margin: 5px 6px;
+  padding: 0 5px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.cv .data .submit {
+  height: 30px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.cv .data h4 {
+  text-transform: uppercase;
+  font-weight: 1em;
+  color: #1a6283;
+}
+
+.btnN {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+
+.downloadCV:hover {
+  color: #fff;
+}
+
+.generateCV:hover {
+  color: #fff;
+}
+
+/* for mobile responsive */
+@media only screen and (max-width: 600px) {
+
+  .textFont {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+    color: #000;
+  }
+
+  .resumeContainer {
+    margin-top: 50px !important;
+  }
+
+  .card-body-bg {
+
+    margin: 10px 0 0 0;
+    background-color: #f5f5f5;
+  }
+
+  .lables {
+    font-weight: bold;
+  }
+
+  .inputMargin {
+    margin: 5px 0;
+  }
+
+  .verticalSpace {
+    margin: 10px 0;
+  }
+
+  .topSpace {
+    margin-top: 20px;
+  }
+
+  .bottomSpace {
+    margin-top: 15px;
+  }
+
+  .downloadCV {
+    color: #fff;
+    background-color: #134b3f;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+  }
+
+  .generateCV {
+    color: #fff;
+    background-color: #134b3f;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+  }
+
+  .card-header {
+    margin: 0 0 10px 0;
+  }
+
+  .resumeCard {
+    display: block;
+    border: 3px double #134b3f;
+    padding: 10px;
+  }
+
+  .cv {
+    size: A4;
+    width: 100%;
+    display: none;
+  }
+
+  .cv .container {
+    size: A4;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(0, 0, 0, .1);
+    margin: auto;
+    padding: 0;
+  }
+
+  .cv .container .left {
+    background-color: #134b3f;
+    -webkit-print-color-adjust: exact;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .cv .text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255, .2);
+  }
+
+  .cv .text .pic {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .cv .text h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .cv .text span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .cv .text .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .cv .info {
+    padding-top: 10px;
+  }
+
+  .cv .title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .cv .info ul {
+    position: relative;
+    padding-left: 0rem;
+  }
+
+  .cv .info #fFacebook,
+  .cv .info #lLinkedin {
+    cursor: pointer;
+  }
+
+  .cv .info ul li {
+    list-style: none;
+    position: relative;
+    margin: 2px 0px;
+  }
+
+  .cv .info ul li .icon {
+    display: inline-block;
+    width: 10px;
+    font-size: 12px;
+    color: #2bf1c6;
+  }
+
+  .cv .info ul li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .cv .lang {
+    margin-top: 10px;
+
+  }
+
+  .cv .lang ul {
+    padding-left: 1rem;
+
+  }
+
+  .cv .lang li {
+    list-style: square;
+    color: #2bf1c6;
+    padding: 1px;
+  }
+
+  .cv .lang li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .cv .skills {
+    margin-top: 10px;
+
+  }
+
+  .cv .skills ul {
+    padding-left: 1rem;
+
+  }
+
+  .cv .skills li {
+    list-style: square;
+    color: #2bf1c6;
+    padding: 1px;
+  }
+
+  .cv .skills li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .cv .certificate {
+    margin-top: 10px;
+
+  }
+
+  .cv .certificate ul {
+    padding-left: 1rem;
+
+  }
+
+  .cv .certificate li {
+    list-style: square;
+    color: #2bf1c6;
+    padding: 1px;
+  }
+
+  .cv .certificate li span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .cv .container .right {
+    position: relative;
+    background: #f5f5f5;
+    padding: 10px;
+  }
+
+  .cv .right .about h2 {
+    text-transform: uppercase;
+    font-weight: 750;
+    color: #011f2d;
+    font-size: 12px;
+  }
+
+  .cv .right .about p {
+    color: #333;
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  .cv .right .exp h2 {
+    text-transform: uppercase;
+    font-weight: 750;
+    font-size: 12px;
+    color: #011f2d;
+    margin-top: 10px;
+  }
+
+  .cv .exp .works h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    color: #011f2d;
+  }
+
+  .cv .exp li {
+    padding: 0px 5px;
+    font-size: 12px;
+    font-weight: 300;
+    padding-left: 0rem;
+    list-style: square;
+  }
+
+
+  .cv .edu li {
+
+    padding: 0px 5px;
+    font-size: 12px;
+    font-weight: 300;
+    padding-left: 0rem;
+    list-style: square;
+  }
+
+  .cv .right .edu h2 {
+    text-transform: uppercase;
+    font-weight: 750;
+    font-size: 12px;
+    color: #011f2d;
+    margin-top: 5px;
+  }
+
+
+  .squar {
+    color: #134b3f;
+    font-size: 10px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 12px;
+    margin-bottom: 0.2rem;
+    color: #011f2d;
+  }
+
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+}

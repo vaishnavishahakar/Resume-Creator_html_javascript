@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build My Resume</title>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+    <!-- resume content -->
+    <div class="row ">
+      <div class="col-md-6 resumeContainer p-0" id="cv-form">
+        <div class="container">
+          <div class="card-header">
+            <h1 class="text-center my-2 headingText">Resume Maker</h1>
+          </div>
+          <div class=" card-body-bg">
+            <div class="card-body">
+              <div class="contain">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group verticalSpace">
+                      <label id="lable" class="lables" for="fullNameField">Full Name</label>
+                      <input type="text" id="fullNameField" placeholder="Enter full name" class="form-control inputMargin" />
+                    </div>
+
+                    <div class="form-group verticalSpace">
+                      <label class="lables" for="jobFiled">Job Title </label>
+                      <input type="text" id="jobFiled" placeholder="Enter job title" class="form-control inputMargin" />
+                    </div>
+
+                    <div class="form-group verticalSpace">
+                      <label class="lables" for="mobileNumberField">Mobile Number</label>
+                      <input type="number" id="mobileNumberField" placeholder="Enter mobile number"
+                        class="form-control inputMargin" />
+                    </div>
+
+                    <div class="form-group verticalSpace">
+                      <label class="lables" for="emailAddressFiled">Email Address</label>
+                      <input type="email" id="emailAddressFiled" placeholder="Enter email address"
+                        class="form-control inputMargin"></input>
+                    </div>
+
+                    <div class="form-group verticalSpace">
+                      <label class="lables" for="profileImageField">Profile</label>
+                      <input id="profileImageField" type="file" class="form-control inputMargin" accept="image/png, image/jpeg" />
+                    </div>
+
+                    <div class="form-group verticalSpace" id="li">
+                      <div class="form-group ">
+                        <label class="lables" for="addressField">Address </label>
+                        <input type="text" id="addressField" placeholder="Enter address" class="form-control inputMargin" />
+                      </div>
+
+                      <div class="form-group verticalSpace">
+                        <label class="lables" for="dateofbirth">Date of Birth</label>
+                        <input type="date" id="dateofbirth" placeholder="Enter date of birth" class="form-control inputMargin" />
+                      </div>
+
+                      <div class="form-group verticalSpace" id="la">
+                        <label class="lables" for="">Languages</label>
+                        <input placeholder="Enter language" class="form-control laField inputMargin"></input>
+                        <input placeholder="Enter language" class="form-control laField inputMargin"></input>
+                        <input placeholder="Enter language" class="form-control laField inputMargin"></input>
+                      </div>
+
+                      <div class="form-group verticalSpace" id="sk">
+                        <label class="lables" for="">Skills</label>
+                        <input placeholder="Enter skill" class="form-control skField inputMargin"></input>
+                        <input placeholder="Enter skill" class="form-control skField inputMargin"></input>
+                        <input placeholder="Enter skill" class="form-control skField inputMargin"></input>
+                        <input placeholder="Enter skill" class="form-control skField inputMargin"></input>
+                      </div>
+
+                      <div class="form-group verticalSpace" id="cr">
+                        <label class="lables" for="">Certification</label>
+                        <input placeholder="Enter certification name" class="form-control crField inputMargin"></input>
+                        <input placeholder="Enter certification name" class="form-control crField inputMargin"></input>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+
+                    <div class="form-group verticalSpace">
+                      <label class="lables" for="">Objective</label>
+                      <textarea id="objectiveField" placeholder="Enter about yourself" class="form-control inputMargin"
+                        rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group verticalSpace" id="ed">
+                      <label class="lables" for="">Education</label>
+                      <input placeholder="Enter education details" class="form-control edField inputMargin"></input>
+                      <input placeholder="Enter education details" class="form-control edField inputMargin"></input>
+                      <input placeholder="Enter education details" class="form-control edField inputMargin"></input>
+                    </div>
+
+                    <div class="form-group verticalSpace" id="we">
+                      <label class="lables " for="">Work Experience</label>
+                      <div class="form-group " id="ti">
+                        <input placeholder="Enter company name" class="form-control tiField inputMargin"></input>
+                      </div>
+                      <div class="form-group ">
+                        <input placeholder="Enter designation" class="form-control weField inputMargin"></input>
+                      </div>
+
+                      <div class="form-group " id="ti">
+                        <input placeholder="Enter company name" class="form-control tiField2 topSpace inputMargin"></input>
+                      </div>
+
+                      <div class="form-group ">
+                        <input placeholder="Enter designation" class="form-control weField2 inputMargin"></input>
+                      </div>
+
+                    </div>
+
+                    <div class="form-group verticalSpace" id="project">
+                      <label class="lables" for="">Projects</label>
+                      <div class="form-group  " id="ti">
+                        <input placeholder="Enter project name" class="form-control protiField inputMargin"></input>
+                      </div>
+
+                      <div class="form-group ">
+                        <textarea placeholder="Enter project description"
+                          class="form-control proField inputMargin"></textarea>
+                      </div>
+
+                      <div class="form-group  " id="ti">
+                        <input placeholder="Enter project name" class="form-control protiField2 topSpace inputMargin"></input>
+                      </div>
+
+                      <div class="form-group ">
+                        <textarea placeholder="Enter project description"
+                          class="form-control proField2 inputMargin"></textarea>
+                      </div>
+
+                      <div class="form-group  " id="ti">
+                        <input placeholder="Enter project name"
+                          class="form-control protiField3 inputMargin topSpace"></input>
+                      </div>
+
+                      <div class="form-group ">
+                        <textarea placeholder="Enter project description"
+                          class="form-control proField3 inputMargin"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center verticalSpace">
+          <button onclick="generateCV()" class="generateCV">
+            Generate Resume
+          </button>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6 col-sm-12 resumeContainer" id="resume">
+        <div class="card-header" id="heading">
+          <h1 class="text-center my-2 headingText">Resume Preview</h1>
+        </div>
+        <div>
+          <div class="cv " id="cv-template">
+            <div class="container" id="cv-template-container">
+              <div class="left">
+                <div class="text">
+                  <div class="pic">
+                    <img id="imgTemplate" src="" alt="" class="img-fluid myimg" />
+                  </div>
+                  <h2 id="fullName" class="textFont"> </h2>
+                  <span id="jobTitle" style="text-align: center;"> </span>
+                </div>
+                <div class="info">
+                  <h3 class="title textFont">contact info</h3>
+                  <ul>
+                    <li>
+                      <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      <span id="mobileNumber"></p>
+                    </li>
+                    <li>
+                      <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                      <span id="emailAddress"></span>
+                    </li>
+                    <li>
+                      <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                      <span id="address" href=""></span>
+                    </li>
+                    <li>
+                      <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                      <span id="dateOfBirth" href=""></span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="lang">
+                  <h3 class="title textFont">languages</h3>
+                  <ul id="lan">
+                  </ul>
+                </div>
+
+                <div class="skills">
+                  <h2 class="title textFont">skills</h2>
+                  <ul id="skills">
+                  </ul>
+                </div>
+
+                <div class="certificate">
+                  <h2 class="title textFont">Certificate</h2>
+                  <ul id="certificate">
+                  </ul>
+                </div>
+
+              </div>
+              <div class="right">
+                <div class="about">
+                  <h2 class="textFont">About</h2>
+                  <p id="objectiveT">
+                  </p>
+                </div>
+                <div class="edu">
+                  <h2 class="title textFont">Education</h2>
+                  <ul id="edu">
+                  </ul>
+                </div>
+                <div class="exp">
+                  <h2 class="textFont">Work Experience</h2>
+                  <div class="works">
+                    <h3 class="textFont" id="titleF"></h3>
+                    <ul id="weT">
+                    </ul>
+                    <h3 class="textFont" id="titleF2"></h3>
+                    <ul id="weT2">
+                    </ul>
+                    <h3 class="textFont" id="titleF3"></h3>
+                    <ul id="weT3">
+                    </ul>
+                  </div>
+
+                  <h2 class="textFont">Projects</h2>
+                  <div class="projects">
+                    <h3 class="textFont" id="titleP"></h3>
+                    <ul id="projectText">
+                    </ul>
+                    <h3 class="textFont" id="titleP2"></h3>
+                    <ul id="projectText2">
+                    </ul>
+                    <h3 class="textFont" id="titleP3"></h3>
+                    <ul id="projectText3">
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="btnN" class=" text-center my-2">
+            <button onclick="downloadPDF()" class="downloadCV">Download Resume</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- print as a pdf -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
+  </body>
+
+</html>
